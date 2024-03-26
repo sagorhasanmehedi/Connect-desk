@@ -20,6 +20,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureOne.signup",
     },
     paragraph: "allFeatures.featureOne.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 2,
@@ -30,6 +32,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureTwo.dashboard",
     },
     paragraph: "allFeatures.featureTwo.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 3,
@@ -40,6 +44,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureThree.easily",
     },
     paragraph: "allFeatures.featureThree.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 4,
@@ -50,6 +56,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureFour.easily",
     },
     paragraph: "allFeatures.featureFour.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 5,
@@ -60,6 +68,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureFive.easily",
     },
     paragraph: "allFeatures.featureFive.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 6,
@@ -70,6 +80,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureSix.business",
     },
     paragraph: "allFeatures.featureSix.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 7,
@@ -80,6 +92,8 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureSeven.system",
     },
     paragraph: "allFeatures.featureSeven.para",
+    right: "fade-right",
+    left: "fade-left",
   },
   {
     id: 8,
@@ -90,5 +104,7 @@ export const features: IFeaturesPage[] = [
       third: "allFeatures.featureEight.easily",
     },
     paragraph: "allFeatures.featureEight.para",
+    right: "fade-right",
+    left: "fade-left",
   },
 ];

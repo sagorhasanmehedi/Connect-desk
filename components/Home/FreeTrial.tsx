@@ -1,7 +1,8 @@
 "use client";
 
+import { useTranslation } from "@/app/i18n/client";
 import { freeTrial } from "@/public/assets/images";
-import { FC } from "react";
+import Link from "next/link";
 import {
   BackgroundImage,
   Button,
@@ -9,8 +10,6 @@ import {
   Container,
   MainContainer,
 } from "..";
-import { IIntlTranslator } from "@/Interface";
-import { useTranslation } from "@/app/i18n/client";
 
 export const FreeTrial = ({ lng }: { lng: string }) => {
   const { t } = useTranslation(lng, "index");
@@ -21,7 +20,10 @@ export const FreeTrial = ({ lng }: { lng: string }) => {
           img={freeTrial}
           className="w-fit sm:w-full sm:h-fit max-h-full sm:max-h-[150px] max-w-[980px] px-5 sm:px-20 pb-5 sm:pb-[25px] pt-6 sm:pt-[30px]"
         >
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-[10px]">
+          <div
+            className="flex flex-col sm:flex-row justify-between items-center gap-[10px]"
+            data-aos="flip-up"
+          >
             <div className="flex flex-col justify-center items-center sm:items-start gap-1 sm:gap-2.5 freeTrail">
               <h6 className="text-primary text-center sm:text-start">
                 {t("freeTrial.oneTool")}
@@ -34,7 +36,9 @@ export const FreeTrial = ({ lng }: { lng: string }) => {
               </CommonText>
             </div>
             <div>
-              <Button variant="primary">{t("freeTrial.buttonLevel")}</Button>
+              <Link href="signup" passHref>
+                <Button variant="primary">{t("freeTrial.buttonLevel")}</Button>
+              </Link>
             </div>
           </div>
         </BackgroundImage>

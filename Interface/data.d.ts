@@ -14,6 +14,8 @@ export interface IFeaturesPage {
     third: string;
   };
   paragraph: string;
+  right: string;
+  left: string;
 }
 
 export interface IHardwareData {

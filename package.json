@@ -14,6 +14,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "accept-language": "^3.0.18",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.15",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
@@ -36,6 +37,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "daisyui": "^3.7.5"
   }
 }

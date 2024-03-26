@@ -16,7 +16,10 @@ export const HeroLeft: FC<IHeroLeft> = ({
   pos,
   lng,
 }) => (
-  <div className="md:mt-[5%] sm:w-[90%] md:w-[70%] lg:w-[70%] xl:w-fit md:ml-10 lg:ml-[60px] mx-auto flex flex-col justify-center items-center md:justify-start md:items-start">
+  <div
+    data-aos="fade-right"
+    className="md:mt-[5%] sm:w-[90%] md:w-[70%] lg:w-[70%] xl:w-fit md:ml-10 lg:ml-[60px] mx-auto flex flex-col justify-center items-center md:justify-start md:items-start"
+  >
     <div className="relative">
       <h1
         className={`text-[20px] md:text-[24px] lg:text-[32px] font-semibold ${

@@ -19,7 +19,10 @@ export const PackageCard: FC<IPackageCard & IIntlTranslator> = ({
     img={index % 2 === 0 ? packageBgLite : packageBg}
     className="sm:w-[400px] shadow-lg rounded-[21px] max-w-[390px] sm:max-w-full"
   >
-    <div className="flex justify-center items-center flex-col pb-7">
+    <div
+      className="flex justify-center items-center flex-col pb-7"
+      data-aos="zoom-in"
+    >
       <CartTop title={t(title)} height="h-12 sm:h-14" text="lg" />
 
       <CommonText text="md" className="text-[#1B253F] mt-2 sm:mt-3">

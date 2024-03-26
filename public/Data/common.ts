@@ -122,11 +122,11 @@ export const navItems: INavItems[] = [
   },
   {
     label: "Contact Us",
-    link: ""
+    link: "contact-us",
   },
   {
     label: "header.navItems.more",
     link: "",
     option: more,
-  }
+  },
 ];
