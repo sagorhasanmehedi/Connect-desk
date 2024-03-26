@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import { Exo, Inter, Poppins } from "next/font/google";
 import { FC } from "react";
 
-import { dir } from "i18next";
-import { languages } from "@/app/i18n/settings";
 import { IChildrenWithIntl } from "@/Interface";
+import { languages } from "@/app/i18n/settings";
+import { dir } from "i18next";
 
+import { AOSInit } from "@/lib/AOSInit";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<IChildrenWithIntl> = ({ children, params: { lng } }) => (
   <html lang={lng} dir={dir(lng)}>
     <body className={(poppins.className, exo.className, inter.className)}>
+      <AOSInit />
       {children}
     </body>
   </html>

@@ -29,7 +29,12 @@ export const AboutHome: FC<IIntlTranslator & IIntlLang> = ({ t, lng }) => (
       />
 
       <div className="w-full md:w-[95%] xl:w-full mx-auto flex flex-col lg:flex-row justify-center items-center gap-[5%] mt-6 lg:mt-0">
-        <div className="flex justify-center lg:justify-end xl:justify-center w-full xl:w-fit">
+        <div
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          className="flex justify-center lg:justify-end xl:justify-center w-full xl:w-fit"
+        >
           <Image
             src={mackbook}
             className="xl:w-[521px] md:w-[70%] w-[80%]"
@@ -37,7 +42,12 @@ export const AboutHome: FC<IIntlTranslator & IIntlLang> = ({ t, lng }) => (
           />
         </div>
 
-        <div className="w-[90%] lg:max-w-[500px] flex flex-col justify-start items-start gap-4 mt-6 xl:mt-0">
+        <div
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          className="w-[90%] lg:max-w-[500px] flex flex-col justify-start items-start gap-4 mt-6 xl:mt-0"
+        >
           <CommonText>
             <Trans
               i18nKey="aboutHome.firstPara"

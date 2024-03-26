@@ -7,7 +7,10 @@ import { FC } from "react";
 import { SupportCard } from "./SupportCard";
 
 export const SupportBox: FC<IIntlTranslator & IIntlLang> = ({ t, lng }) => (
-  <div className="w-fit md:w-[50%] flex flex-col justify-center items-start md:justify-start gap-3 md:gap-4 md:pr-5 lg:pr-0 md:pt-12 lg:pt-0">
+  <div
+    data-aos="zoom-in-left"
+    className="w-fit md:w-[50%] flex flex-col justify-center items-start md:justify-start gap-3 md:gap-4 md:pr-5 lg:pr-0 md:pt-12 lg:pt-0"
+  >
     <ComponentHeader
       title={
         <>

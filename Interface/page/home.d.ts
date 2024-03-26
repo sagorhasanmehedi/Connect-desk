@@ -4,6 +4,7 @@ export interface IFeatures {
   icon: StaticImageData;
   title: string;
   des: string;
+  dos: string;
 }
 
 export interface IPackages {

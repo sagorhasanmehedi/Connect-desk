@@ -1,11 +1,12 @@
 "use client";
 
-import { IBlogs, IIntlLang, IIntlTranslator } from "@/Interface";
+import { IBlogs, IIntlLang } from "@/Interface";
+import { useTranslation } from "@/app/i18n/client";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import { CommonText, MainContainer } from "..";
 import { BlogButton } from "./BlogButton";
-import { useTranslation } from "@/app/i18n/client";
 
 export const Blog: FC<IBlogs & IIntlLang> = ({
   description,
@@ -30,9 +31,11 @@ export const Blog: FC<IBlogs & IIntlLang> = ({
             </h1>
             <CommonText>{t(description)}</CommonText>
           </div>
-          <button className="text-lg font-medium text-primary border-none">
-            {t("ReadMore")}
-          </button>
+          <Link href={`/blogs/${id}`}>
+            <button className="text-lg font-medium text-primary border-none">
+              {t("ReadMore")}
+            </button>
+          </Link>
         </div>
 
         <div className="w-full md:w-[35%] flex justify-center items-center md:justify-end mt-5 md:mt-0">

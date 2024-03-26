@@ -12,13 +12,15 @@ export const Feature: FC<IFeaturesPage & IIntlTranslator & IIntlLang> = ({
   title,
   t,
   lng,
+  left,
+  right,
 }) => (
   <div
     className={`flex flex-col ${
       id % 2 === 1 ? "md:flex-row" : "md:flex-row-reverse"
     } md:gap-14 lg:gap-24 justify-center md:mb-20 px-10`}
   >
-    <div>
+    <div data-aos={left}>
       <Image
         src={image}
         alt={title.second}
@@ -26,6 +28,7 @@ export const Feature: FC<IFeaturesPage & IIntlTranslator & IIntlLang> = ({
       />
     </div>
     <div
+      data-aos={right}
       className={`flex flex-col justify-center mx-auto md:mx-0 mt-8 md:mt-0 ${
         lng === "bn" ? "max-w-[350px]" : "max-w-[342px]"
       }`}

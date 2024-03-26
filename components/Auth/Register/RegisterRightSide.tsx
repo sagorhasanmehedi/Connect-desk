@@ -15,7 +15,7 @@ export const RegisterRightSide: FC = () => {
 
   return (
     <AuthMainRightSide
-      maxWidth="max-w-[602px]"
+      maxWidth="max-w-[460px]"
       authTopLabel="Register Your Business Area"
       setUserType={setUserType}
       userType={userType}
@@ -37,32 +37,29 @@ export const RegisterRightSide: FC = () => {
           placeholder="Enter your business name"
         />
 
-        <div className="md:flex gap-5">
-          <InputField
-            handleOnChange={handleOnChange}
-            label="Mobile Number"
-            placeholder="Enter your number"
-          />
-          <InputField
-            handleOnChange={handleOnChange}
-            label="Email"
-            placeholder="Enter your email"
-          />
-        </div>
-        <div className="md:flex gap-5">
-          <InputField
-            handleOnChange={handleOnChange}
-            type="password"
-            label="Password"
-            placeholder="Password (Min. 6 digit)"
-          />
-          <InputField
-            handleOnChange={handleOnChange}
-            label="Retype Password"
-            type="password"
-            placeholder="Retype Password"
-          />
-        </div>
+        <InputField
+          handleOnChange={handleOnChange}
+          label="Mobile Number"
+          placeholder="Enter your number"
+        />
+        <InputField
+          handleOnChange={handleOnChange}
+          label="Email"
+          placeholder="Enter your email"
+        />
+
+        <InputField
+          handleOnChange={handleOnChange}
+          type="password"
+          label="Password"
+          placeholder="Password (Min. 6 digit)"
+        />
+        <InputField
+          handleOnChange={handleOnChange}
+          label="Retype Password"
+          type="password"
+          placeholder="Retype Password"
+        />
       </div>
     </AuthMainRightSide>
   );
