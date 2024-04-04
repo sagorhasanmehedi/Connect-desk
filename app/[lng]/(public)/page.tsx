@@ -2,6 +2,7 @@
 
 import { IIntlParams } from "@/Interface";
 import { useTranslation } from "@/app/i18n/client";
+import { testimonials } from "@/app/i18n/locales/en/testimonial";
 import {
   AboutHome,
   CommonText,
@@ -13,6 +14,7 @@ import {
   PerfectSolution,
   Support,
 } from "@/components";
+import TestimonialSlider from "@/components/common/TestimonialSlider";
 import { heroLaptop } from "@/public/assets/images";
 import { FC } from "react";
 
@@ -35,6 +37,7 @@ const Home: FC<IIntlParams> = ({ params: { lng } }) => {
       <Packages t={t} />
       <Support lng={lng} t={t} />
       <FreeTrial lng={lng} />
+      <TestimonialSlider testimonials={testimonials} />
     </main>
   );
 };
