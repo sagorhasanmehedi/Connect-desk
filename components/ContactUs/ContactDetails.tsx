@@ -1,16 +1,16 @@
 "use client";
 
+import { IIntlTranslator } from "@/Interface";
 import { contactData } from "@/public/Data";
 import Image from "next/image";
 import { FC } from "react";
 import { CommonText } from "..";
-import { IIntlTranslator } from "@/Interface";
 
 export const ContactDetails: FC<IIntlTranslator> = ({ t }) => (
-  <div className="w-full flex flex-col justify-center items-center mx-auto">
+  <div className="w-full">
     <div>
       {contactData.map((data) => (
-        <div key={data.title} className="my-4 flex gap-1 items-start">
+        <div key={data.title} className="my-4 flex gap-1 items-center">
           <Image src={data.icon} alt={data.title} />
           <div>
             <h3 className="text-sm font-semibold">{t(data.title)}</h3>
@@ -23,7 +23,7 @@ export const ContactDetails: FC<IIntlTranslator> = ({ t }) => (
               ></iframe>
             ) : (
               data.details.map((p) => (
-                <div key={p}>
+                <div key={p} className="">
                   <CommonText>{p}</CommonText>
                 </div>
               ))
