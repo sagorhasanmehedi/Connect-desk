@@ -1,9 +1,30 @@
 import { IIntlTranslator } from "@/Interface";
+import { FC, useState } from "react";
 import { Button, InputField } from "..";
-import { FC } from "react";
 
 export const ContactUsForm: FC<IIntlTranslator> = ({ t }) => {
-  const handleOnChange = () => {};
+  const [formData, setFormData] = useState<any>({
+    name: "",
+    address: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleOnChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevState: any) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = () => {
+    // You can access form data here from the state variable `formData`
+    console.log(formData);
+    // You can perform further actions like sending the data to a server here
+  };
   return (
     <div className="bg-base-100 bg-opacity-50 rounded-md p-6 w-full ">
       <InputField
@@ -24,7 +45,7 @@ export const ContactUsForm: FC<IIntlTranslator> = ({ t }) => {
         rows={8}
       />
       <br /> <br />
-      <Button width="full" variant="primary">
+      <Button width="full" variant="primary" onClick={handleSubmit}>
         {t("contactForm.submit")}
       </Button>
     </div>
